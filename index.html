@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O-Level Student Manager · Form 1-4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> O-LEVEL STUDENT MANAGEMENT SYSTEM</h1>
+            <h3>Form 1 - Form 4</h3>
+            <div class="nav-buttons">
+                <a href="register.html" class="btn btn-primary"> REGISTER NEW STUDENT</a>
+            </div>
+        </header>
+
+        
+        <section class="card">
+            <h2> ALL REGISTERED STUDENTS</h2>
+            <div class="table-responsive">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Full Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Current Form</th>
+                            <th>Average Score</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        
+                    </tbody>
+                </table>
+                <div id="emptyStudentMessage" class="empty-message">
+                     No students registered yet. 
+                    <a href="register.html">Click here to register</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <div class="modal-overlay" id="performanceModal">
+        <div class="modal">
+            <h3 id="modalStudentName">Student Name</h3>
+            <div class="modal-sub" id="modalStudentIdForm">ID · Form</div>
+
+            <h4 style="margin: 1rem 0; color: #1e3a5f;"> ACADEMIC PERFORMANCE</h4>
+            
+            
+            <div class="subject-row">
+                <label>PHYSICS</label>
+                <input type="number" id="scorePhysics" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> CHEMISTRY</label>
+                <input type="number" id="scoreChemistry" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> BIOLOGY</label>
+                <input type="number" id="scoreBiology" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> ENGLISH</label>
+                <input type="number" id="scoreEnglish" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> MATHEMATICS</label>
+                <input type="number" id="scoreMathematics" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> CIVICS</label>
+                <input type="number" id="scoreCivics" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> KISWAHILI</label>
+                <input type="number" id="scoreKiswahili" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> HISTORY</label>
+                <input type="number" id="scoreHistory" min="0" max="100" value="50" class="score-input">
+            </div>
+            <div class="subject-row">
+                <label> GEOGRAPHY</label>
+                <input type="number" id="scoreGeography" min="0" max="100" value="50" class="score-input">
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn" id="cancelModalBtn">CANCEL</button>
+                <button class="btn btn-primary" id="savePerformanceBtn"> SAVE SCORES</button>
+            </div>
+            <p class="modal-note"> Scores are for current form. Previous records are preserved.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

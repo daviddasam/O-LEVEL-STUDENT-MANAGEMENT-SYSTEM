@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Student · O-Level Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> REGISTER NEW STUDENT</h1>
+            <h3>Form 1 - Form 4 Admission</h3>
+            <div class="nav-buttons">
+                <a href="index.html" class="btn"> BACK TO STUDENTS</a>
+            </div>
+        </header>
+
+       
+        <section class="card">
+            <h2> STUDENT DETAILS</h2>
+            
+            <div class="form-container">
+                
+                <div class="form-group">
+                    <label for="studentName">FULL NAME <span style="color: #b13e3e;"></span></label>
+                    <input type="text" id="studentName" placeholder="e.g., John Mwangi" autocomplete="off">
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="studentId">STUDENT ID <span style="color: #b13e3e;"></span> (must be unique)</label>
+                    <input type="text" id="studentId" placeholder="e.g., S12345" autocomplete="off">
+                </div>
+                
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentAge">AGE <span style="color: #b13e3e;"></span></label>
+                        <input type="number" id="studentAge" min="10" max="30" value="15">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="studentGender">GENDER <span style="color: #b13e3e;"></span></label>
+                        <select id="studentGender">
+                            <option value="Male">MALE</option>
+                            <option value="Female">FEMALE</option>
+                            <option value="Other">OTHER</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="studentForm">CURRENT FORM <span style="color: #b13e3e;"></span></label>
+                    <select id="studentForm">
+                        <option value="1">FORM 1</option>
+                        <option value="2">FORM 2</option>
+                        <option value="3">FORM 3</option>
+                        <option value="4">FORM 4</option>
+                    </select>
+                </div>
+
+                
+                <div id="registerFeedback" class="feedback"></div>
+
+               
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="window.location.href='index.html'">CANCEL</button>
+                    <button type="button" class="btn btn-primary" id="registerBtn"> REGISTER STUDENT</button>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="card info-card">
+            <h3> REGISTRATION GUIDELINES</h3>
+            <ul style="margin-left: 1.5rem; color: #1e293b;">
+                <li>Student ID must be unique - no duplicates allowed</li>
+                <li>Age should be between 10 and 30 years</li>
+                <li>After registration, you can add academic scores</li>
+                <li>Students can be promoted to next forms</li>
+                <li>All subjects: Physics, Chemistry, Biology, English, Mathematics, Civics, Kiswahili, History, Geography</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
